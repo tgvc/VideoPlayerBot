@@ -22,7 +22,7 @@ from config import Config
 from logger import LOGGER
 from utils import update, is_admin
 from pyrogram import Client, filters
-from plugins.controls import is_admin
+from plugins.bot.controls import is_admin
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, InputMediaDocument
 
 
