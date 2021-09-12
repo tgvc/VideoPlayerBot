@@ -33,7 +33,7 @@ admin_filter=filters.create(is_admin)
 @Client.on_message(filters.command(["play", f"play@{Config.BOT_USERNAME}"]) & (filters.chat(Config.CHAT_ID) | filters.private | filters.chat(Config.LOG_GROUP)))
 async def add_to_playlist(_, message: Message):
     if Config.ADMIN_ONLY == "True":
-        admins = await get_admins(Config.CHAT)
+        admins = await get_admins(Config.CHAT_ID)
         if message.from_user.id not in admins:
             await message.reply_sticker("CAACAgUAAxkBAAEBpyZhF4R-ZbS5HUrOxI_MSQ10hQt65QACcAMAApOsoVSPUT5eqj5H0h4E")
             return
