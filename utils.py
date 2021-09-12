@@ -229,7 +229,7 @@ async def get_raw_files(link):
 
 async def edit_title():
     if not Config.playlist:
-        title = "STREAM 24/7 | 🔴 LIVE"
+        title = "STREAM 24/7 | LIVE"
     else:       
         title = Config.playlist[0][1]
     
