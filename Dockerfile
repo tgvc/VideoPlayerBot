@@ -18,6 +18,8 @@ COPY requirements.txt /requirements.txt
 
 # Installing Requirements
 RUN cd /
+RUN pip3 install flask
+RUN pip3 install flask_restful
 RUN pip3 install -U -r requirements.txt
 RUN mkdir /VideoPlayerBot
 WORKDIR /VideoPlayerBot
